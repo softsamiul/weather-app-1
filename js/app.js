@@ -3,7 +3,6 @@ searchBtn.addEventListener('click', () => {
     // geting search city
     const getSearchInputTag = document.getElementById('location-input');
     const searchLocation = getSearchInputTag.value;
-    console.log(searchLocation);
 
     fetchApi(searchLocation);
 })
@@ -19,7 +18,6 @@ const fetchApi = (searchLocation) => {
 
 // Display fetched data
 const displayData = (data) => {
-    console.log(data);
     // Update location
     const cityName = document.getElementById('city');
     cityName.innerText = data.location.name;

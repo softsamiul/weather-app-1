@@ -1,3 +1,7 @@
+// preloader
+window.addEventListener('load', () => {
+    document.getElementById('preloader').style.display = 'none';
+})
 const searchBtn = document.getElementById('search-btn');
 searchBtn.addEventListener('click', () => {
     // geting search city

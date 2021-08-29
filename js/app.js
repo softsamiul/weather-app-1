@@ -7,7 +7,7 @@ searchBtn.addEventListener('click', () => {
     fetchApi(searchLocation);
 
 
-})
+});
 
 // Fetching api
 const fetchApi = (searchLocation) => {
@@ -42,6 +42,9 @@ const displayData = (data) => {
     // updateing condition
     const condition = document.getElementById('condition');
     condition.innerText = data.current.condition.text;
+
+    console.log(data.current.condition.text);
+
 
     // Update weather-condition-icon
     const tempIcon = document.getElementById('weather-condition-icon');

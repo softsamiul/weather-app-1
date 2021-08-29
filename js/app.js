@@ -3,7 +3,6 @@ searchBtn.addEventListener('click', () => {
     // geting search city
     const getSearchInputTag = document.getElementById('location-input');
     const searchLocation = getSearchInputTag.value;
-
     fetchApi(searchLocation);
 })
 
@@ -16,11 +15,23 @@ const fetchApi = (searchLocation) => {
         .then(data => displayData(data))
 }
 
+const def = fetchApi('kolkata');
+console.log(def);
+
+
 // Display fetched data
 const displayData = (data) => {
+    console.log(data);
+
     // Update location
     const cityName = document.getElementById('city');
     cityName.innerText = data.location.name;
+    // Update region
+    const region = document.getElementById('region');
+    region.innerText = data.location.region;
+    // update county
+    const country = document.getElementById('country');
+    country.innerText = data.location.country;
     // update temprature
     const temp = document.getElementById('temp');
     temp.innerText = data.current.temp_c;

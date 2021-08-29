@@ -9,11 +9,19 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/fav.svg" type="image/x-icon">
     <style>
         body {
             background-color: #63a91f;
             background-image: linear-gradient(314deg, #63a91f 0%, #1a512e 74%);
             height: 100vh;
+        }
+        
+        .err-design {
+            color: #f47380;
+            font-size: 20px;
+            text-align: center;
         }
     </style>
 </head>
@@ -30,13 +38,14 @@
                     <button id="search-btn" type="button" class="btn btn-danger">Search</button>
                 </div>
             </div>
+
         </form>
         <div class="weather-status text-white text-center">
             <img id="weather-condition-icon" src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
             <h1 id="city">Kolkata</h1>
-            <h6><span id="region">West Bengal</span> <span id="country">India</span></h6>
-            <h3><span id="temp">38.06</span>&deg;C</h3>
-            <h1 class="lead">Clouds</h1>
+            <h6><span id="region"></span> <span id="country"></span></h6>
+            <h3><span id="temp"></span>&deg;C</h3>
+            <h1 id="condition" class="lead"></h1>
         </div>
         <!-- footer -->
         <footer class="fixed-bottom text-light">

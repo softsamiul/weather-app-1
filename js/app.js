@@ -3,7 +3,10 @@ searchBtn.addEventListener('click', () => {
     // geting search city
     const getSearchInputTag = document.getElementById('location-input');
     const searchLocation = getSearchInputTag.value;
+
     fetchApi(searchLocation);
+
+
 })
 
 // Fetching api
@@ -16,7 +19,7 @@ const fetchApi = (searchLocation) => {
 }
 
 const def = fetchApi('kolkata');
-console.log(def);
+// console.log(def);
 
 
 // Display fetched data
@@ -35,6 +38,10 @@ const displayData = (data) => {
     // update temprature
     const temp = document.getElementById('temp');
     temp.innerText = data.current.temp_c;
+
+    // updateing condition
+    const condition = document.getElementById('condition');
+    condition.innerText = data.current.condition.text;
 
     // Update weather-condition-icon
     const tempIcon = document.getElementById('weather-condition-icon');

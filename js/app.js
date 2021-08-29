@@ -10,7 +10,7 @@ searchBtn.addEventListener('click', () => {
 
 // Fetching api
 const fetchApi = (searchLocation) => {
-    const url = `http://api.weatherapi.com/v1/current.json?key=c35d689fc18f475e83c231327212808&q=${searchLocation}&aqi=yes`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=c35d689fc18f475e83c231327212808&q=${searchLocation}&aqi=no`;
 
     fetch(url)
         .then(res => res.json())
